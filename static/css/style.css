@@ -1,0 +1,21 @@
+html,
+body,
+#topten {
+  height: 100%;
+  padding: 20px;
+  margin: 10;
+}
+
+#map,
+body,
+html {
+ height: 100%;
+ width: 800px;
+}
+
+
+#heat-map,
+body,
+html {
+  height: 100%;
+}
