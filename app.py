@@ -16,6 +16,7 @@ def list_locations():
     topten["Acres"] = topten["Acres"].replace('%', '')
     topten["Acres"] = topten["Acres"].astype(float)
     topten = topten.sort_values("Acres", ascending=False)
+    # print(topten, flush=True)
     return topten.head(10).to_json(orient="records")
 
 @app.route("/data_states")
