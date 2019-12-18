@@ -41,7 +41,7 @@ print(SliderDataSorted, flush=True)
 heatMapjson = heatMapData.to_dict(orient="records")
 sliderjson = SliderDataSorted
 
-# Returning data to html
+# Returning data to html 
 @app.route("/topten")
 def toptendisplay():
     return render_template("topten.html")
