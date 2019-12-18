@@ -1,4 +1,4 @@
-# import necessary libraries
+# import necessary libraries(dependancies)
 import pandas as pd
 from flask import (
     Flask,
