@@ -1,4 +1,4 @@
-# import necessary libraries
+# import necessary libraries(dependancies)
 import pandas as pd
 from flask import (
     Flask,
@@ -16,7 +16,7 @@ def list_locations():
     topten["Acres"] = topten["Acres"].replace('%', '')
     topten["Acres"] = topten["Acres"].astype(float)
     topten = topten.sort_values("Acres", ascending=False)
-    # print(topten, flush=True)
+ 
     return topten.head(10).to_json(orient="records")
 
 @app.route("/data_states")
@@ -41,7 +41,7 @@ print(SliderDataSorted, flush=True)
 heatMapjson = heatMapData.to_dict(orient="records")
 sliderjson = SliderDataSorted
 
-# Returning data to html
+# Returning data to html 
 @app.route("/topten")
 def toptendisplay():
     return render_template("topten.html")
